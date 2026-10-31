@@ -1,0 +1,157 @@
+.network-carousel {
+  padding: var(--space-2xl) 0;
+  position: relative;
+}
+
+.network-carousel__header {
+  margin-bottom: var(--space-lg);
+}
+
+.network-carousel__title {
+  font-size: clamp(1.4rem, 2.8vw, 1.9rem);
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 4px;
+}
+
+.network-carousel__sub {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+}
+
+.network-carousel__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.network-carousel__track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 8px 4px 16px 4px;
+  width: 100%;
+}
+
+.network-carousel__track::-webkit-scrollbar {
+  display: none;
+}
+
+.network-carousel__card {
+  position: relative;
+  flex: 0 0 200px;
+  height: 120px;
+  background: linear-gradient(135deg, var(--network-color), var(--color-surface) 75%);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.network-carousel__card-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--network-color, var(--color-secondary));
+  box-shadow: 0 0 10px var(--network-color);
+  z-index: 2;
+}
+
+.network-carousel__card-image {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  width: 52%;
+  height: calc(100% - 20px);
+  object-fit: contain;
+  opacity: 0.62;
+}
+
+.network-carousel__card-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--network-color);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  letter-spacing: 0.5px;
+  z-index: 1;
+}
+
+.network-carousel__card:hover {
+  transform: translateY(-6px) scale(1.03);
+  border-color: var(--network-color);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--network-color);
+}
+
+.network-carousel__card-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 4px;
+  position: relative;
+  z-index: 1;
+}
+
+.network-carousel__card-count {
+  font-size: 0.8rem;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  position: relative;
+  z-index: 1;
+}
+
+.network-carousel__arrow {
+  position: absolute;
+  z-index: 5;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(13, 13, 43, 0.85);
+  border: 1px solid rgba(108, 92, 231, 0.3);
+  color: #fff;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: all 0.2s ease;
+}
+
+.network-carousel__arrow:hover {
+  background: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.network-carousel__arrow--left {
+  left: -20px;
+}
+
+.network-carousel__arrow--right {
+  right: -20px;
+}
+
+@media (max-width: 768px) {
+  .network-carousel__arrow {
+    display: none;
+  }
+  .network-carousel__card {
+    flex: 0 0 160px;
+    height: 105px;
+  }
+}

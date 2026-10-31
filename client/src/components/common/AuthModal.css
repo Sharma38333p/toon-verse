@@ -1,0 +1,198 @@
+.auth-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(6, 6, 22, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  animation: fadeIn 0.25s ease;
+}
+
+.auth-modal-content {
+  background: var(--color-surface);
+  border: 1px solid rgba(108, 92, 231, 0.4);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 440px;
+  overflow: hidden;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 40px rgba(108, 92, 231, 0.25);
+  animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.auth-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background: rgba(13, 13, 43, 0.8);
+  border-bottom: 1px solid rgba(108, 92, 231, 0.2);
+}
+
+.auth-modal-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.auth-modal-tab {
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-pill);
+  transition: all 0.2s ease;
+}
+
+.auth-modal-tab:hover {
+  color: #fff;
+}
+
+.auth-modal-tab--active {
+  background: var(--gradient-primary);
+  color: #fff;
+  box-shadow: 0 2px 10px rgba(108, 92, 231, 0.4);
+}
+
+.auth-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.auth-modal-close:hover {
+  background: var(--color-danger);
+  transform: rotate(90deg);
+}
+
+.auth-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-error-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 107, 107, 0.15);
+  border: 1px solid rgba(255, 107, 107, 0.4);
+  color: var(--color-danger);
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.auth-input-group label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  margin-bottom: 6px;
+}
+
+.auth-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(13, 13, 43, 0.8);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+}
+
+.auth-input-wrapper:focus-within {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 12px rgba(0, 206, 201, 0.3);
+}
+
+.auth-input-icon {
+  color: var(--color-text-muted);
+}
+
+.auth-input-wrapper input {
+  background: transparent;
+  color: #fff;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.auth-submit-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: var(--gradient-primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+  margin-top: 6px;
+  box-shadow: var(--shadow-glow-primary);
+  transition: all 0.2s ease;
+}
+
+.auth-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(108, 92, 231, 0.6);
+}
+
+.auth-demo-shortcuts {
+  margin-top: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.demo-label {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.demo-btns-row {
+  display: flex;
+  gap: 8px;
+}
+
+.demo-chip-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.demo-chip-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.demo-chip-admin {
+  border-color: rgba(253, 203, 110, 0.4);
+  color: var(--color-accent);
+}
+
+.demo-chip-admin:hover {
+  background: rgba(253, 203, 110, 0.15);
+}
