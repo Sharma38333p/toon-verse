@@ -13,7 +13,7 @@ The local API and media service runs at `http://localhost:5000`; the Vite app ru
 
 ## Deploy the frontend to Vercel
 
-The root `vercel.json` builds and serves the Vite app from `client`. Set `VITE_API_BASE_URL` in the Vercel project to the public URL of a separately hosted API, ending in `/api`, if one is available. If it is unset, the production frontend uses same-origin `/api` requests.
+Set the Vercel project's root directory to `client`; `vercel.json` supplies the Vite build and output settings for that root. Set `VITE_API_BASE_URL` in the Vercel project to the public URL of a separately hosted API, ending in `/api`, if one is available. If it is unset, the production frontend uses same-origin `/api` requests.
 
 The Express API and videos in `video_container` are not deployed to Vercel. Vercel's serverless runtime does not provide persistent local disk for uploaded media, and the repository intentionally excludes video files and server secrets. To make cloud playback and downloads work for public visitors, deploy the API to a persistent server, configure a production database, and store videos in durable object storage; then set `VITE_API_BASE_URL` to that API's URL.
 
