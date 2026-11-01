@@ -4,35 +4,35 @@
 /* ---------- Design Tokens ---------- */
 :root {
   /* Colors */
-  --color-primary: #33845A;
-  --color-primary-light: #69AD82;
-  --color-secondary: #61B889;
-  --color-secondary-light: #B5E4C7;
-  --color-accent: #D99A36;
-  --color-accent-light: #F3D28F;
+  --color-primary: #6C5CE7;
+  --color-primary-light: #A29BFE;
+  --color-secondary: #00CEC9;
+  --color-secondary-light: #81ECEC;
+  --color-accent: #FDCB6E;
+  --color-accent-light: #FFEAA7;
   --color-danger: #FF6B6B;
-  --color-success: #3D9D69;
+  --color-success: #55EFC4;
 
-  --color-bg: #F2F8F3;
-  --color-bg-alt: #E8F2EA;
-  --color-surface: #FFFFFF;
-  --color-surface-hover: #EAF4EC;
-  --color-surface-glass: rgba(255, 255, 255, 0.86);
+  --color-bg: #0D0D2B;
+  --color-bg-alt: #0A0A20;
+  --color-surface: #1A1A40;
+  --color-surface-hover: #24245A;
+  --color-surface-glass: rgba(26, 26, 64, 0.6);
 
-  --color-text: #1D3829;
-  --color-text-secondary: #587362;
-  --color-text-muted: #778B7E;
+  --color-text: #FFFFFF;
+  --color-text-secondary: #A0A0C0;
+  --color-text-muted: #6B6B8D;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #33845A, #69AD82);
-  --gradient-secondary: linear-gradient(135deg, #61B889, #B5E4C7);
-  --gradient-accent: linear-gradient(135deg, #F3D28F, #D99A36);
-  --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(242, 248, 243, 0.72) 58%, #F2F8F3 100%);
-  --gradient-card: linear-gradient(145deg, rgba(51, 132, 90, 0.08), rgba(97, 184, 137, 0.05));
+  --gradient-primary: linear-gradient(135deg, #6C5CE7, #A29BFE);
+  --gradient-secondary: linear-gradient(135deg, #00CEC9, #81ECEC);
+  --gradient-accent: linear-gradient(135deg, #FDCB6E, #E17055);
+  --gradient-hero: linear-gradient(180deg, transparent 0%, rgba(13, 13, 43, 0.6) 50%, #0D0D2B 100%);
+  --gradient-card: linear-gradient(145deg, rgba(108, 92, 231, 0.1), rgba(0, 206, 201, 0.05));
 
   /* Borders */
-  --border-subtle: 1px solid rgba(51, 132, 90, 0.16);
-  --border-glow: 1px solid rgba(51, 132, 90, 0.32);
+  --border-subtle: 1px solid rgba(108, 92, 231, 0.2);
+  --border-glow: 1px solid rgba(108, 92, 231, 0.4);
 
   /* Radius */
   --radius-sm: 8px;
@@ -43,10 +43,10 @@
   --radius-round: 50%;
 
   /* Shadows */
-  --shadow-card: 0 8px 32px rgba(31, 78, 51, 0.1);
-  --shadow-glow-primary: 0 0 20px rgba(51, 132, 90, 0.2);
-  --shadow-glow-secondary: 0 0 20px rgba(97, 184, 137, 0.2);
-  --shadow-elevated: 0 16px 48px rgba(31, 78, 51, 0.16);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --shadow-glow-primary: 0 0 20px rgba(108, 92, 231, 0.3);
+  --shadow-glow-secondary: 0 0 20px rgba(0, 206, 201, 0.3);
+  --shadow-elevated: 0 16px 48px rgba(0, 0, 0, 0.4);
 
   /* Spacing */
   --space-xs: 4px;
@@ -92,7 +92,6 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: light;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -224,261 +223,6 @@ input {
     opacity: 1;
     transform: translateX(0);
   }
-}
-
-/* ---------- Light Green Theme Surfaces ---------- */
-#root .hero-banner__bg-img {
-  filter: brightness(0.9) saturate(1.08);
-}
-
-#root .navbar {
-  border-bottom-color: rgba(51, 132, 90, 0.18);
-  box-shadow: 0 4px 20px rgba(31, 78, 51, 0.08);
-}
-
-#root .network-carousel__card {
-  background: linear-gradient(135deg, rgba(51, 132, 90, 0.12), #fff 75%);
-  border-color: rgba(51, 132, 90, 0.16);
-}
-
-#root .network-carousel__card-name {
-  color: var(--color-text);
-}
-
-#root .network-carousel__card-badge {
-  background: rgba(255, 255, 255, 0.84);
-}
-
-#root .hero-banner__gradient-overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(242, 248, 243, 0.08) 0%,
-    rgba(242, 248, 243, 0.76) 65%,
-    var(--color-bg) 100%
-  );
-}
-
-#root .hero-banner__vignette {
-  background: radial-gradient(circle at 20% 50%, transparent 0%, rgba(242, 248, 243, 0.52) 80%, var(--color-bg) 100%);
-}
-
-#root .hero-banner__title,
-#root .networks-title,
-#root .network-card-name,
-#root .search-empty-view h2,
-#root .admin-title,
-#root .table-card-header h3,
-#root .guard-card h2,
-#root .detail-title,
-#root .status-title,
-#root .hub-title,
-#root .detail-not-found,
-#root .detail-loading-view {
-  color: var(--color-text);
-}
-
-#root .hero-banner__title {
-  text-shadow: 0 1px 8px rgba(255, 255, 255, 0.65);
-}
-
-#root .hero-banner__description,
-#root .detail-synopsis {
-  color: var(--color-text-secondary);
-  text-shadow: 0 1px 6px rgba(255, 255, 255, 0.7);
-}
-
-#root .hero-banner__categories .hero-cat-pill,
-#root .hero-btn--details,
-#root .detail-back-link,
-#root .detail-category-pill,
-#root .meta-badge,
-#root .btn-trailer-action,
-#root .btn-share-action,
-#root .btn-quick-download,
-#root .download-link-card .link-download-btn {
-  background: rgba(255, 255, 255, 0.78);
-  border-color: rgba(51, 132, 90, 0.2);
-  color: var(--color-text);
-}
-
-#root .hero-banner__categories .hero-cat-pill {
-  border-style: solid;
-}
-
-#root .hero-btn--details:hover,
-#root .detail-back-link:hover,
-#root .btn-trailer-action:hover,
-#root .btn-share-action:hover,
-#root .btn-quick-download:hover {
-  background: #fff;
-  border-color: rgba(51, 132, 90, 0.38);
-}
-
-#root .detail-banner-img {
-  filter: brightness(0.85) blur(4px);
-}
-
-#root .detail-banner-overlay {
-  background: linear-gradient(180deg, rgba(242, 248, 243, 0.52) 0%, rgba(242, 248, 243, 0.84) 60%, var(--color-bg) 100%);
-}
-
-#root .detail-poster-card,
-#root .download-hub-card,
-#root .network-card,
-#root .search-box-card,
-#root .search-empty-view,
-#root .admin-table-card,
-#root .kpi-card,
-#root .guard-card {
-  border-color: rgba(51, 132, 90, 0.16);
-  box-shadow: var(--shadow-card);
-}
-
-#root .detail-fav-btn,
-#root .container-status-card,
-#root .download-link-card,
-#root .storage-summary-card,
-#root .admin-table-card,
-#root .kpi-card {
-  background: var(--color-surface);
-  color: var(--color-text);
-}
-
-#root .status-sub code,
-#root .empty-container-notice code,
-#root .table-code {
-  background: rgba(51, 132, 90, 0.08);
-}
-
-#root .search-input-group,
-#root .search-select,
-#root .filter-pill,
-#root .auth-input-wrapper,
-#root .gate-input-wrapper,
-#root .file-input,
-#root .form-group input,
-#root .form-group select,
-#root .form-group textarea {
-  background-color: #fff;
-  border-color: rgba(51, 132, 90, 0.2);
-  color: var(--color-text);
-}
-
-#root .filters-container {
-  background: rgba(51, 132, 90, 0.06);
-  border-color: rgba(51, 132, 90, 0.12);
-}
-
-#root .filter-pill:hover {
-  color: var(--color-primary);
-}
-
-#root .admin-nav-tab,
-#root .admin-refresh-btn,
-#root .guard-home-btn,
-#root .saved-account-btn,
-#root .gate-form-tabs {
-  background: rgba(51, 132, 90, 0.07);
-  border-color: rgba(51, 132, 90, 0.16);
-  color: var(--color-text);
-}
-
-#root .admin-nav-tab:hover,
-#root .admin-refresh-btn:hover,
-#root .guard-home-btn:hover,
-#root .saved-account-btn:hover:not(:disabled) {
-  background: rgba(51, 132, 90, 0.12);
-}
-
-#root .admin-table td,
-#root .table-title,
-#root .kpi-val,
-#root .summary-title,
-#root .download-modal-title,
-#root .player-title,
-#root .trailer-modal-title,
-#root .auth-input-wrapper input,
-#root .gate-input-wrapper input,
-#root .file-input {
-  color: var(--color-text);
-}
-
-#root .admin-table th,
-#root .admin-table td,
-#root .admin-table tr,
-#root .modal-actions,
-#root .admin-table th {
-  border-color: rgba(51, 132, 90, 0.12);
-}
-
-#root .modal-panel,
-#root .auth-modal-content,
-#root .trailer-modal-content,
-#root .download-modal-content,
-#root .player-modal-content {
-  background: var(--color-surface);
-  border-color: rgba(51, 132, 90, 0.2);
-  box-shadow: var(--shadow-elevated);
-}
-
-#root .modal-header,
-#root .auth-modal-header,
-#root .trailer-modal-header,
-#root .trailer-modal-footer,
-#root .download-modal-header,
-#root .player-modal-header,
-#root .player-modal-footer {
-  background: var(--color-bg-alt);
-  border-color: rgba(51, 132, 90, 0.14);
-}
-
-#root .modal-header h3 {
-  color: var(--color-text);
-}
-
-#root .modal-close,
-#root .auth-modal-close,
-#root .trailer-modal-close,
-#root .download-modal-close,
-#root .player-modal-close {
-  background: rgba(51, 132, 90, 0.1);
-  color: var(--color-text);
-}
-
-#root .demo-chip-btn,
-#root .btn-demo-pill,
-#root .download-btn-secondary,
-#root .player-direct-download-btn,
-#root .link-download-btn {
-  background: rgba(51, 132, 90, 0.07);
-  border-color: rgba(51, 132, 90, 0.16);
-  color: var(--color-text);
-}
-
-#root .auth-gate-card {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(51, 132, 90, 0.2);
-  box-shadow: var(--shadow-elevated);
-}
-
-#root .gate-chip,
-#root .gate-demo-box,
-#root .saved-accounts-section,
-#root .saved-account-btn {
-  background-color: rgba(255, 255, 255, 0.8);
-  border-color: rgba(51, 132, 90, 0.18);
-  color: var(--color-text);
-}
-
-#root .gate-hero-title,
-#root .gate-chip,
-#root .saved-name,
-#root .saved-account-btn {
-  color: var(--color-text);
-}
-
-#root .table-thumb {
-  background: var(--color-bg-alt);
 }
 
 @keyframes pulse {

@@ -14,12 +14,12 @@
 
 .trailer-modal-content {
   background: var(--color-surface);
-  border: 1px solid rgba(51, 132, 90, 0.25);
+  border: 1px solid rgba(108, 92, 231, 0.4);
   border-radius: var(--radius-xl);
   width: 100%;
   max-width: 860px;
   overflow: hidden;
-  box-shadow: var(--shadow-elevated), 0 0 40px rgba(51, 132, 90, 0.14);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.7), 0 0 40px rgba(108, 92, 231, 0.25);
   animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -28,8 +28,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  background: var(--color-bg-alt);
-  border-bottom: 1px solid rgba(51, 132, 90, 0.14);
+  background: rgba(13, 13, 43, 0.7);
+  border-bottom: 1px solid rgba(108, 92, 231, 0.2);
 }
 
 .trailer-modal-title-group {
@@ -51,15 +51,15 @@
 }
 
 .trailer-modal-title {
-  color: var(--color-text);
+  color: #fff;
   font-size: 1.15rem;
   font-weight: 800;
   margin: 0;
 }
 
 .trailer-modal-close {
-  background: rgba(51, 132, 90, 0.1);
-  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -92,7 +92,7 @@
 
 .trailer-modal-footer {
   padding: 16px 24px;
-  background: var(--color-bg-alt);
+  background: rgba(13, 13, 43, 0.6);
 }
 
 .trailer-modal-meta {
