@@ -22,10 +22,7 @@ function Navbar() {
       <div className="navbar__inner container">
         {/* Logo */}
         <Link to="/" className="navbar__logo">
-          <div className="navbar__logo-icon">🎬</div>
-          <div className="navbar__logo-text-group">
-            <span className="navbar__logo-text">Toon<span className="logo-accent">Verse</span></span>
-          </div>
+          <img src="/toonverse-logo.png" alt="ToonVerse home" />
         </Link>
 
         {/* Center Nav Links (desktop) */}

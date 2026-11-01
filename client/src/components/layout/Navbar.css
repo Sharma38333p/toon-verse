@@ -23,27 +23,15 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: 900;
-  font-size: 1.45rem;
+  flex: 0 0 auto;
+  height: 56px;
 }
 
-.navbar__logo-icon {
-  font-size: 1.6rem;
-  line-height: 1;
-}
-
-.navbar__logo-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: -0.5px;
-}
-
-.logo-accent {
-  background: var(--gradient-secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.navbar__logo img {
+  display: block;
+  width: 84px;
+  height: 56px;
+  object-fit: contain;
 }
 
 .navbar__links {

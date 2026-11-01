@@ -40,8 +40,7 @@ function Footer() {
           {/* Column 1: About */}
           <div className="footer__col">
             <Link to="/" className="footer__brand">
-              <span className="footer__brand-emoji">🎬</span>
-              <span className="footer__brand-text">Toon<span className="logo-accent">Verse</span></span>
+              <img src="/toonverse-logo.png" alt="ToonVerse home" />
             </Link>
             <p className="footer__about-text">
               Your ultimate destination for discovering, watching trailers, and downloading

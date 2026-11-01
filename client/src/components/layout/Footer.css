@@ -66,25 +66,15 @@
 .footer__brand {
   display: flex;
   align-items: center;
-  gap: var(--space-xs, 6px);
+  width: fit-content;
   margin-bottom: var(--space-md, 16px);
 }
 
-.footer__brand-emoji {
-  font-size: 1.5rem;
-}
-
-.footer__brand-text {
-  font-size: 1.35rem;
-  font-weight: 800;
-  background: linear-gradient(
-    135deg,
-    var(--color-primary, #6c5ce7),
-    var(--color-secondary, #00cec9)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.footer__brand img {
+  display: block;
+  width: 150px;
+  height: auto;
+  border-radius: var(--radius-sm, 8px);
 }
 
 .footer__about-text {
