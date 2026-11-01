@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: var(--navbar-height);
-  background: rgba(13, 13, 43, 0.9);
+  background: rgba(242, 248, 243, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(108, 92, 231, 0.2);
@@ -53,14 +53,14 @@
 }
 
 .navbar__link:hover {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-primary);
+  background: rgba(51, 132, 90, 0.08);
 }
 
 .navbar__link--active {
-  color: #fff;
-  background: rgba(108, 92, 231, 0.2);
-  border: 1px solid rgba(108, 92, 231, 0.4);
+  color: var(--color-primary);
+  background: rgba(51, 132, 90, 0.1);
+  border: 1px solid rgba(51, 132, 90, 0.25);
 }
 
 .navbar__link--admin {
@@ -74,9 +74,9 @@
 }
 
 .navbar__icon-btn {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #fff;
+  background: rgba(51, 132, 90, 0.08);
+  border: 1px solid rgba(51, 132, 90, 0.18);
+  color: var(--color-text);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -88,7 +88,7 @@
 }
 
 .navbar__icon-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(51, 132, 90, 0.16);
   transform: translateY(-2px);
 }
 
@@ -125,7 +125,7 @@
 
 .navbar__admin-quick-btn:hover {
   background: var(--color-accent);
-  color: #0d0d2b;
+  color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(253, 203, 110, 0.4);
 }
@@ -133,7 +133,7 @@
 .navbar__hamburger {
   display: none;
   background: transparent;
-  color: #fff;
+  color: var(--color-text);
   padding: 4px;
 }
 
@@ -145,9 +145,9 @@
   left: 0;
   right: 0;
   background: var(--color-surface);
-  border-bottom: 1px solid rgba(108, 92, 231, 0.3);
+  border-bottom: 1px solid rgba(51, 132, 90, 0.24);
   padding: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 20px 40px rgba(31, 78, 51, 0.16);
   flex-direction: column;
   gap: 16px;
 }
@@ -165,14 +165,14 @@
 .navbar__mobile-link {
   font-size: 1.05rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color-text);
   padding: 8px 12px;
   border-radius: var(--radius-md);
   display: block;
 }
 
 .navbar__mobile-link:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(51, 132, 90, 0.08);
 }
 
 .navbar__mobile-link--admin {

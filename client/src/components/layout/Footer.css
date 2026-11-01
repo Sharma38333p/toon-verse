@@ -4,8 +4,8 @@
 
 .footer {
   position: relative;
-  background: var(--color-surface, #1a1a40);
-  border-top: 1px solid rgba(108, 92, 231, 0.15);
+  background: var(--color-bg-alt);
+  border-top: 1px solid rgba(51, 132, 90, 0.16);
   overflow: hidden;
   font-family: var(--font-family, 'Nunito', sans-serif);
 }
@@ -93,7 +93,7 @@
 }
 
 .footer__col-title {
-  color: var(--color-text, #ffffff);
+  color: var(--color-text, #1d3829);
   font-size: 1rem;
   font-weight: 700;
   margin: 0 0 var(--space-md, 16px);
@@ -156,13 +156,13 @@
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(108, 92, 231, 0.12);
+  background: rgba(51, 132, 90, 0.1);
   font-size: 1rem;
   transition: background 0.25s ease;
 }
 
 .footer__social-link:hover .footer__social-icon {
-  background: rgba(0, 206, 201, 0.15);
+  background: rgba(97, 184, 137, 0.16);
 }
 
 .footer__social-label {
@@ -174,7 +174,7 @@
 .footer__bottom {
   position: relative;
   z-index: 1;
-  border-top: 1px solid rgba(108, 92, 231, 0.1);
+  border-top: 1px solid rgba(51, 132, 90, 0.12);
   padding: var(--space-md, 16px) var(--space-lg, 24px);
   text-align: center;
 }

@@ -14,12 +14,12 @@
 
 .player-modal-content {
   background: var(--color-surface);
-  border: 1px solid rgba(0, 206, 201, 0.4);
+  border: 1px solid rgba(97, 184, 137, 0.36);
   border-radius: var(--radius-xl);
   width: 100%;
   max-width: 960px;
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8), 0 0 45px rgba(0, 206, 201, 0.25);
+  box-shadow: var(--shadow-elevated), 0 0 45px rgba(97, 184, 137, 0.18);
   animation: scaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -28,8 +28,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 16px 24px;
-  background: rgba(13, 13, 43, 0.85);
-  border-bottom: 1px solid rgba(0, 206, 201, 0.2);
+  background: var(--color-bg-alt);
+  border-bottom: 1px solid rgba(97, 184, 137, 0.2);
   flex-wrap: wrap;
   gap: 12px;
 }
@@ -44,8 +44,8 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(0, 206, 201, 0.15);
-  border: 1px solid rgba(0, 206, 201, 0.4);
+  background: rgba(97, 184, 137, 0.12);
+  border: 1px solid rgba(97, 184, 137, 0.32);
   color: var(--color-secondary);
   font-size: 0.78rem;
   font-weight: 800;
@@ -73,9 +73,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #fff;
+  background: rgba(51, 132, 90, 0.08);
+  border: 1px solid rgba(51, 132, 90, 0.18);
+  color: var(--color-text);
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   font-size: 0.82rem;
@@ -85,13 +85,13 @@
 
 .player-direct-download-btn:hover {
   background: var(--gradient-secondary);
-  color: #0d0d2b;
+  color: #1d3829;
   border-color: transparent;
 }
 
 .player-modal-close {
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff;
+  background: rgba(51, 132, 90, 0.1);
+  color: var(--color-text);
   border-radius: 50%;
   width: 34px;
   height: 34px;
@@ -125,7 +125,7 @@
 
 .player-modal-footer {
   padding: 18px 24px;
-  background: rgba(13, 13, 43, 0.75);
+  background: var(--color-bg-alt);
 }
 
 .player-title-row {
@@ -138,7 +138,7 @@
 }
 
 .player-title {
-  color: #fff;
+  color: var(--color-text);
   font-size: 1.2rem;
   font-weight: 800;
   margin: 0;
@@ -154,7 +154,7 @@
 }
 
 .player-storage-hint code {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(51, 132, 90, 0.08);
   padding: 2px 6px;
   border-radius: 4px;
   font-family: monospace;

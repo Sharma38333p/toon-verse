@@ -10,7 +10,7 @@
 .network-carousel__title {
   font-size: clamp(1.4rem, 2.8vw, 1.9rem);
   font-weight: 900;
-  color: #fff;
+  color: var(--color-text);
   margin-bottom: 4px;
 }
 
@@ -121,9 +121,9 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(13, 13, 43, 0.85);
-  border: 1px solid rgba(108, 92, 231, 0.3);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(51, 132, 90, 0.22);
+  color: var(--color-primary);
   font-size: 1.6rem;
   display: flex;
   align-items: center;
