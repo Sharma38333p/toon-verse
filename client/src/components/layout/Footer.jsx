@@ -104,7 +104,7 @@ function Footer() {
       <div className="footer__bottom">
         <div className="container footer__bottom-inner">
           <p className="footer__copyright">
-            &copy; 2026 ToonVerse Platform. Playful Geometric Design System. All rights reserved.
+            &copy; 2026 Ritik Sharma. Made with ❤️ for Cartoon Lovers.
           </p>
           <div className="footer__legal">
             <span>Free Discovery & Streaming</span>
