@@ -23,6 +23,7 @@
 .navbar__logo {
   display: flex;
   align-items: center;
+  gap: 10px;
   flex: 0 0 auto;
   height: 56px;
 }
@@ -32,6 +33,14 @@
   width: 84px;
   height: 56px;
   object-fit: contain;
+}
+
+.navbar__logo-text {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+  letter-spacing: -0.4px;
+  white-space: nowrap;
 }
 
 .navbar__links {

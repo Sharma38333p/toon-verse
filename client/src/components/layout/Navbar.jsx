@@ -23,6 +23,7 @@ function Navbar() {
         {/* Logo */}
         <Link to="/" className="navbar__logo">
           <img src="/toonverse-logo.png" alt="ToonVerse home" />
+          <span className="navbar__logo-text">ToonVerse</span>
         </Link>
 
         {/* Center Nav Links (desktop) */}
