@@ -88,8 +88,11 @@ function CartoonCard({ cartoon, onPlayTrailer, onDownload, isNew }) {
 
       <div className="cartoon-card__info">
         <span className="cartoon-card__network">{cartoon.network}</span>
-        <h3 className="cartoon-card__title" title={cartoon.title}>
-          {cartoon.title}
+        <h3 className="cartoon-card__title" title={cartoon.title} aria-label={cartoon.title}>
+          <span className="cartoon-card__title-track" aria-hidden="true">
+            <span>{cartoon.title}</span>
+            <span>{cartoon.title}</span>
+          </span>
         </h3>
         <div className="cartoon-card__meta">
           <span className="cartoon-card__year">{cartoon.year}</span>

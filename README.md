@@ -11,6 +11,23 @@ ToonVerse is a React/Vite cartoon browser with an Express API and a local video-
 
 The local API and media service runs at `http://localhost:5000`; the Vite app runs at `http://localhost:5173`.
 
+### Start automatically when you sign in to Windows
+
+Run this once from the repository root in PowerShell to add the local API/media server and website to your Windows Startup folder:
+
+```powershell
+$scriptPath = (Resolve-Path .\scripts\start-local.ps1).Path
+$startupPath = Join-Path $env:APPDATA 'Microsoft\Windows\Start Menu\Programs\Startup'
+$shell = New-Object -ComObject WScript.Shell
+$shortcut = $shell.CreateShortcut((Join-Path $startupPath 'ToonVerse Local Services.lnk'))
+$shortcut.TargetPath = (Get-Command powershell.exe).Source
+$shortcut.Arguments = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File `"$scriptPath`""
+$shortcut.WorkingDirectory = (Get-Location).Path
+$shortcut.Save()
+```
+
+The start script listens on localhost only, reuses services already responding on the expected ports, and writes logs under `%LOCALAPPDATA%\ToonVerse\logs`.
+
 ## Deploy the frontend to Vercel
 
 Set the Vercel project's root directory to `client`; `vercel.json` supplies the Vite build and output settings for that root. Set `VITE_API_BASE_URL` in the Vercel project to the public URL of a separately hosted API, ending in `/api`, if one is available. If it is unset, the production frontend uses same-origin `/api` requests.

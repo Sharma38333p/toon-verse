@@ -164,14 +164,55 @@
 }
 
 .cartoon-card__title {
-  font-size: 0.95rem;
-  font-weight: 800;
-  color: #fff;
-  line-height: 1.35;
-  white-space: nowrap;
+  position: relative;
   overflow: hidden;
-  text-overflow: ellipsis;
+  width: 100%;
+  padding: 6px 0;
   margin-bottom: 8px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(100deg, rgba(108, 92, 231, 0.32), rgba(0, 206, 201, 0.18), rgba(108, 92, 231, 0.32));
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.cartoon-card__title-track {
+  display: flex;
+  width: max-content;
+  animation: cartoon-title-marquee 16s linear infinite;
+}
+
+.cartoon-card__title-track span {
+  flex: 0 0 auto;
+  padding-right: 2rem;
+}
+
+.cartoon-card:hover .cartoon-card__title-track {
+  animation-play-state: paused;
+}
+
+@keyframes cartoon-title-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cartoon-card__title-track {
+    animation: none;
+  }
+
+  .cartoon-card__title-track span:nth-child(2) {
+    display: none;
+  }
+
+  .cartoon-card__title-track span:first-child {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
 }
 
 .cartoon-card__meta {
